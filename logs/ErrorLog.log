@@ -1,0 +1,11 @@
+10/19/2023	23:10:63	4732476e-0a22-465b-9015-e6f75ee99027	ReferenceError	allowedList is not defined	OPTIONS	/	https://www.google.com	
+10/19/2023	23:10:64	0f129c5e-d14b-47cb-8118-146418c67e94	ReferenceError	allowedList is not defined	GET	/	https://www.google.com	
+10/19/2023	23:10:13	adf89353-c7cd-4849-a292-3c0e862ba54f	ReferenceError	allowedList is not defined	OPTIONS	/	https://www.google.com	
+10/19/2023	23:10:14	a4210bd8-f2aa-49bf-907d-94e3c9a23a94	ReferenceError	allowedList is not defined	GET	/	https://www.google.com	
+10/19/2023	23:10:73	e54008e7-42e4-4a27-b700-f74b24f63d24	TypeError	allowedList.indexOf is not a function	OPTIONS	/	https://www.google.com	
+10/19/2023	23:10:74	c0d5c0d2-e1ad-4e08-aaf2-3e68d72d26e2	TypeError	allowedList.indexOf is not a function	GET	/	https://www.google.com	
+10/19/2023	23:10:77	90c5e5ad-e5d8-4aea-8a3e-bd580fd478f7	Error	No Allow By Cors	OPTIONS	/	https://www.google.com	
+10/19/2023	23:10:78	b3bf12f7-8bc4-446a-8b0d-7aef35b3fd4b	Error	No Allow By Cors	GET	/	https://www.google.com	
+10/24/2023	01:10:13	775685b9-c086-4b5f-a75f-78d27f18ab2c	SyntaxError	Expected double-quoted property name in JSON at position 83	POST	/users	undefined	
+10/24/2023	15:10:78	9ed252b8-10d3-4a6a-a77e-0fef5e7383a6	CastError	Cast to ObjectId failed for value "6537b485062f28f39110bafa1" (type string) at path "_id" for model "User"	POST	/notes	undefined	
+10/24/2023	15:10:43	99441ad0-9dff-497a-a1f2-f509ac502f0c	CastError	Cast to ObjectId failed for value "6537b485062f28f39110bafs" (type string) at path "_id" for model "User"	POST	/notes	undefined	

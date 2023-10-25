@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    background-color: rgb(27, 0, 56);
+    place-items: center;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+}
