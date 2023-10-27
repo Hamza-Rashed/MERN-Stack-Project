@@ -9,3 +9,5 @@
 10/24/2023	01:10:13	775685b9-c086-4b5f-a75f-78d27f18ab2c	SyntaxError	Expected double-quoted property name in JSON at position 83	POST	/users	undefined	
 10/24/2023	15:10:78	9ed252b8-10d3-4a6a-a77e-0fef5e7383a6	CastError	Cast to ObjectId failed for value "6537b485062f28f39110bafa1" (type string) at path "_id" for model "User"	POST	/notes	undefined	
 10/24/2023	15:10:43	99441ad0-9dff-497a-a1f2-f509ac502f0c	CastError	Cast to ObjectId failed for value "6537b485062f28f39110bafs" (type string) at path "_id" for model "User"	POST	/notes	undefined	
+10/25/2023	22:10:29	e1bf2443-8203-46aa-b572-995e0f8d5805	TypeError	Note.save is not a function	PATCH	/notes	undefined	
+10/25/2023	22:10:18	5a05a396-937f-47a7-b05b-0fd2fc52106f	CastError	Cast to ObjectId failed for value "6537c1ddce6eb73cf83f09ex" (type string) at path "_id" for model "Note"	PATCH	/notes	undefined	

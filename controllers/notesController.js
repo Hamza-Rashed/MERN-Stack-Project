@@ -18,10 +18,15 @@ const getNotesByUser = asyncHandler(async (req, res) => {
     const user = await User.findById(userId).exec()
     if (!user) return res.status(400).json({ message: `ID User = ${userId} Not Found` })
 
-    const notes = await Note.findOne({ user: userId }).lean().exec()
+    const notes = await Note.find().lean()
     if (!notes?.length) return res.status(400).json({ message: "There are no notes for this user" })
 
-    return res.status(200).json(notes)
+    const notesWithUser = await Promise.all(notes.map(async (note) => {
+        const user = await User.findById(note.user).lean().exec()
+        return { ...note, username: user.username }
+    }))
+        // console.log(userNotes);
+    return res.status(200).json(notesWithUser)
 })
 
 const createNewNote = asyncHandler(async (req, res) => {
@@ -37,7 +42,7 @@ const createNewNote = asyncHandler(async (req, res) => {
     if (notesUser) return res.status(403).json({ message: "Can't make a duplicate note for the same user" })
 
     const note = await Note.create({ user, title, text, completed })
-    console.log(note);
+
     if (!note) return res.status(400).json({ message: "Invalid Response!" })
     
     return res.status(201).json({message: `Note: ${note.title} Created`})
@@ -58,10 +63,9 @@ const updateNote = asyncHandler(async (req, res) => {
     note.text = text
     note.completed = completed
 
-    const updateNote = await Note.save()
+    const updateNote = await note.save()
 
     return res.status(200).json({messaage: `Note: ${updateNote.title} Updated!`})
-
 
 })
 
